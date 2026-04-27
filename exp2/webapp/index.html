@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Event</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #09090b; 
+            color: #f8fafc;
+            padding: 40px; 
+            display: flex;
+            justify-content: center;
+        }
+        .container { 
+            background: #18181b; 
+            padding: 30px; 
+            border-radius: 12px; 
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+            width: 100%;
+            max-width: 450px; 
+        }
+        h2 { 
+            text-align: center; 
+            color: #8b5cf6;
+            margin-bottom: 25px;
+            margin-top: 0;
+        }
+        .form-group { margin-bottom: 20px; }
+        label { 
+            display: block; 
+            margin-bottom: 8px; 
+            font-weight: 500; 
+            color: #94a3b8;
+        }
+        input[type="text"], input[type="date"], textarea { 
+            width: 100%; 
+            padding: 12px; 
+            background: rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.1); 
+            border-radius: 8px; 
+            box-sizing: border-box;
+            color: #f8fafc;
+            font-family: inherit;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #8b5cf6;
+        }
+        button { 
+            background: linear-gradient(135deg, #8b5cf6, #ec4899); 
+            color: white; 
+            padding: 12px 15px; 
+            border: none; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            width: 100%; 
+            font-size: 16px;
+            font-weight: bold;
+            transition: opacity 0.3s ease;
+        }
+        button:hover { 
+            opacity: 0.9; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Enter Event Details</h2>
+        <form action="EventDetails" method="POST">
+            <div class="form-group">
+                <label for="eventName">Event Name:</label>
+                <input type="text" id="eventName" name="eventName" required placeholder="e.g. Summer Music Fest">
+            </div>
+            <div class="form-group">
+                <label for="eventDate">Event Date:</label>
+                <input type="date" id="eventDate" name="eventDate" required>
+            </div>
+            <div class="form-group">
+                <label for="eventLocation">Location:</label>
+                <input type="text" id="eventLocation" name="eventLocation" required placeholder="e.g. Central Park">
+            </div>
+            <div class="form-group">
+                <label for="eventDescription">Description:</label>
+                <textarea id="eventDescription" name="eventDescription" rows="4" required placeholder="Tell us about the event..."></textarea>
+            </div>
+            <button type="submit">Submit Event</button>
+        </form>
+    </div>
+</body>
+</html>
